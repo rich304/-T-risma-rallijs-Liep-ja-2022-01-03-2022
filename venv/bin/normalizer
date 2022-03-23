@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/runner/Turisma-rallijs-Liepaja-2022-01032022/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
