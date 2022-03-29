@@ -37,8 +37,19 @@ data = [("Valmiera - Stalbe", "29"),
 headers = ["Stacijas", "Attālums (km)"]
 print(tabulate(data, headers=headers, tablefmt="grid"))
 
+pilsetas= ['Stalbe', 'Cēsis', 'Turaida', 'Bīriņi', 'Carnikava', 'Melngalvju nams', 'Majori', 'Tīreļi', 'Brocēni', 'Skrunda', 'Aizpute', 'Lielais Dzintars']
 
-print ('Vai sākat spēlēt?')
+i = 0
+
+jaut = ['Kurā novadā atrodas Stalbe?', 'Kāds iespaidīgs sarunu festivāls notiek reizi gadā Cēsīs?', 'Kuram Turaidas pils tika celta?','Kuram latviešu seriālam Bīriņu muiža bija kā galvenā māja/bāze?', 'Kurš Carnikavas dabas parks tika iekļauts Eiropas Savienības īpaši aizsargājamo teritoriju tīklā "Natura 2000"?', 'Kura tirgotāju biedrība izmantoja Melngalvju namu oar savu bāzi Rīgā un dzīru namu?','Kā sauc Majoru centrālo un visdzīvīgāko ielu?', 'Kādās nozīmīgas 1. Pasaules kara Krievijas impērijas un Vācijas kaujas notika Tīreļu purvā un apkaimē?', 'Kādu izejvielu ieguva Cieceres ezera krastā?', 'Kādām vajdzībam Padomju Savienība cēla pilsētu Skrunda-1?', 'Kura ordeņa pils atrodas Aizputē?', 'Cik stāvu ir koncertzālē Lielais Dzintars?']
+
+j = 0
+
+atbildes = ['Cēsu', 'Lampa', 'Rīgas arhibīskapam', 'Ugunsgrēkam', 'Piejūras', 'Hanzas', 'Jomas iela', 'Ziemassvētku kaujas', 'kaļķakmeni', 'militārām', 'Aizputes ordeņa', '8']
+
+x = 0
+
+print ('Vai sākat spēlēt? Spiediet taustiņu 1 vai 2!')
 print('1. Jā')
 print('2. Nē')
 a = input()
@@ -49,7 +60,7 @@ while a == ('1'):
     print('Tavs baterijas līmenis ir 100%')
   else:
     print('baterijas līmenis netiek izvadīts')
-  print ('Vai brauksiet?')
+  print ('Vai brauksiet? Spiediet taustiņu 1 vai 2!')
   print('1. Jā')
   print('2. Nē')
   a = input()
@@ -57,30 +68,27 @@ while a == ('1'):
     break
   else:
     print('Uz kuru galapunktu brauksiet?')
-    print('1. Stalbe')
+    print('1.', pilsetas[i])
+    i= i+1
     print('2. Nebraukšu')
     d = input()
     if d == ('1'):
-      print('Kontrolpunkta jaut: a')
+      print('Kontrolpunkta jaut: ', jaut[j])
+      j = j+1
+      k = input()
+      while k != atbildes[x]:
+        print('Nav pareizi, mēģini vēlreiz.')   
+        k = input()
+      else:
+        print('Atbilde ir pareiza!')
+        x = x+1
+        if x>11:
+          break
     else:
       break
-# Iestatījumi
-print('beigas')
-#nobraukums1 = 80
-#nobraukums2 = 140
-
-#garums1 = 29
-#garums2 = 17
-#garums3 = 42
-#garums4 = 22
-#garums5 = 36
-#garums6 = 30
-#garums7 = 20
-garums8 = 38
-garums9 = 70
-#garums10 = 38
-#garums11 = 42
-#garums12 = 48
-
-
-
+if a == ('2'):
+  print ('beigas')
+elif a == ('1'):
+  print('Malacis! Tu esi uzveicis Elektrisko Tūrisma Ralliju Liepāja 2022! Pateicamies par Jūsu dalību rallijā.')
+else:
+  print ('Nepareizā poga, mēģini vēlreiz!')
